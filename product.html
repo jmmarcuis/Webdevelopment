@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Menu Corner Coffee Shop</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script type="application/javascript" src="script.js"></script>
+  <script src="https://kit.fontawesome.com/0fb13bb383.js" crossorigin="anonymous"></script>
+
+  <link href="style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+  <div class="sidebar">
+
+    <div class="sidebar-brand">
+      <a href="web.html"><img src="Assets/logo.png" alt="Brand Logo"></a>
+    </div>
+
+    <div class="sidebar-menu">
+      <button class="dropdown-btn" onclick="showDropdown()">MENU</button>
+
+      <div class="dropdown-container">
+        <a href="coffee.html">COFFEE</a>
+        <a href="product.html">FOOD</a>
+        <a href="product.html">PASTRY</a>
+      </div>
+    </div>
+
+    <a href="location.html" class="sidebar-location"> LOCATION </a>
+    <a href="contact.html" class="sidebar-contact">CONTACT</a>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-socials">
+        <a href="https://www.facebook.com/TheCornerCalbayog">
+          <span class="fa-stack">
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
+            <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse" style="color: black;"></i>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/thecornercalbayog/">
+          <span class="fa-stack">
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
+            <i class="fa-brands fa-instagram fa-stack-1x fa-inverse" style="color: black;"></i>
+          </span>
+        </a>
+      </div>
+      <button id="open-modal-button">© 2023 <span style="font-weight: 700;">THE CORNER COFFEESHOP</span></button>
+
+    </div>
+
+  </div>
+
+  <!-- Top Navigation -->
+  <div class="topnav">
+    <a href="web.html" class="logo"><img src="Assets/logo.png" alt="Brand Logo"></a>
+    <a href="#" class="icon" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  </div>
+
+  <!-- Overlay -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="web.html" class="logo"><img src="Assets/logo.png" alt="Brand Logo"></a>
+      <button class="dropdown-btn" onclick="toggleDropdown()">MENU</button>
+      <div class="overlay-dropdown-container">
+        <a href="coffee.html">COFFEE</a>
+        <a href="product.html">FOOD</a>
+        <a href="product.html">PASTRY</a>
+      </div>
+      <a href="location.html" class="sidebar-location">LOCATION</a>
+      <a href="contact.html" class="sidebar-contact">CONTACT</a>
+      <div class="overlay-socials">
+        <a href="https://www.facebook.com/TheCornerCalbayog">
+          <span class="fa-stack">
+            <i class="fa-brands fa-facebook-f"></i>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/thecornercalbayog/">
+          <span class="fa-stack">
+
+            <i class="fa-brands fa-instagram"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>WEBSITE CREATED BY:</h3>
+      <h2>JHAINNO ALLRICK MARCOS</h2>
+      <h2>DAVE MIGUEL AVES</h2>
+      <h2>MARC FRANCIS PAGUYO</h2>
+      <h2>CHRISTIAN GABRIEL TONDAG</h2>
+    </div>
+
+  </div>
+
+  <!-- Everything else lol -->
+  <div class="content">
+    <div id="menu" class="menu section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+
+          <h1>MENU</h1>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="menu-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-pasta">Pasta</li>
+              <li data-filter=".filter-fries">Fries</li>
+              <li data-filter=".filter-burgers">Burgers</li>
+              <li data-filter=".filter-hotdog">Hotdog & Sandwiches</li>
+              <li data-filter=".filter-wings">Flavored Wings</li>
+              <li data-filter=".filter-starters">Starters</li>
+              <li data-filter=".filter-soup">Soup</li>
+              <li data-filter=".filter-ricebowls">Rice Bowls</li>
+              <li data-filter=".filter-addons">Add Ons</li>
+              <li data-filter=".filter-coffee">Coffee</li>
+              <li data-filter=".filter-noncoffee">Non-Coffee</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-6 menu-item filter-pasta">
+            <img src="img/shrimpaglio.jpeg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Shrimp Aglio Olio</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Shrimp, Garlic, Chili Flakes, Parsley and Parmesan Cheese Cooked in Olive Oil.
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-pasta">
+            <img src="img/spaghetti bolognese.jpeg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Spaghetti Bolognese</a><span>PHP 220.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Mixed of Italian Herbs with Ground Beef and Sausage in Tomato Meat Sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-pasta">
+            <img src="img/carbonara2.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Carbonara</a><span>PHP 200.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Smoked Bacon, Peppermill and Parmesan Cheese in Cream Sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-pasta">
+            <img src="img/Seafood Marinara.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Seafood Marinara</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Squid Ink Pasta, Shrimps, Squid Rings, Dried Basil, Chili Flakes and Parmesan Cheese in Tomato Sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-pasta">
+            <img src="img/Creamy Garlic Shrimp.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Creamy Garlic Shrimp</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Shrimps with Garlic, Dried Thyme, White Wine and Parmesan Cheese in Cream Sauce.
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-pasta">
+            <img src="img/Chicken Alfredo.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chicken Alfredo</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Deep Fried Chicken Thigh Fillet with Parmesan and Mozzarella Cheese in Cream Sauce
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-pasta">
+            <img src="img/All Meat Pesto.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">All Meat Pesto</a><span>PHP 200.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Smoked Bacon, Sausage and Pesto Cream
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-fries">
+            <img src="img/Cajun Fries.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Cajun Fries</a><span>PHP 120.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-fries">
+            <img src="img/Truffle Parmesan fries.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Truffle & Parmesan</a><span>PHP 150.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-fries">
+            <img src="img/Chili cheese fries.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chili Cheese</a><span>PHP 150.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-fries">
+            <img src="img/garlic parmesan fries.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Garlic Parmesan</a><span>PHP 150.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-burgers">
+            <img src="img/house burger.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">House Burger</a><span>PHP 230.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Truffle Sauce, Sauteed Mushroom, Caramelized Onion with House Dressing
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-burgers">
+            <img src="img/bacon&mushroom.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Bacon & Mushroom</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Smoked Bacon, Sauteed Mushroom with Aioli
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-burgers">
+            <img src="img/cheeseburger.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Cheeseburger</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Sauteed Mushroom, Caramelized Onion, House Dressing with Sliced Cheese
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-burgers">
+            <img src="img/buffalo chicken burger.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Buffalo Chicken</a><span>PHP 245.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Buffalo Chicken, Sliced Cheese with Aioli Dressing and Coleslaw
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-burgers">
+            <img src="img/chick n cheese.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chick N' Cheese</a><span>PHP 230.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Fried Chicken Fillet, Sliced Cheese and Coleslaw
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-hotdog">
+            <img src="img/new york style hotdog.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">New York Style Hotdog</a><span>PHP 230.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-hotdog">
+            <img src="img/chili cheesedog.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chili Cheesdog</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-hotdog">
+            <img src="img/shrimp poboy.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Shrimp Po Boy</a><span>PHP 250.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-hotdog">
+            <img src="img/ham and cheese.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Ham and Cheese</a><span>PHP 165.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-hotdog">
+            <img src="img/tuna melt.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Tuna Melt</a><span>PHP 165.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-hotdog">
+            <img src="img/grilled chicken.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Grilled Chicken</a><span>PHP 180.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-wings">
+            <img src="img/original wings.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Original Wings</a><span>PHP 150.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Fried Chicken coated with House Spices and Fried to Perfection
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-wings">
+            <img src="img/buffalo wings.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Buffalo Wings</a><span>PHP 180.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Coated With Our Home-Made Buffalo Sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-wings">
+            <img src="img/salted egg wings.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Salted Egg Wings</a><span>PHP 180.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Fried Wings with Salted Egg Mixture
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-wings">
+            <img src="img/honey sriracha.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Honey Sriracha</a><span>PHP 180.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Deep Fried Wings with Spiciness of Sriracha and Sweetness of Honey
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-wings">
+            <img src="img/bbq wings.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Barbecue Wings</a><span>PHP 180.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Fried Wings with Our Own Tanginess of Home-Made Barbecue Sauce
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-wings">
+            <img src="img/chili cheese wings.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chili Cheese Wings</a><span>PHP 180.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Fried Wings with Mixture of Cheddar Cheese and Chili Flakes
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="img/potato salad.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Potato Salad</a><span>PHP 150.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="img/nacho overload.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Nachos Overload</a><span>PHP 120.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="img/squid rings.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Squid Rings</a><span>PHP 195.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-starters">
+            <img src="img/bread cheesesticks.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Bread Cheesesticks</a><span>PHP 195.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-soup">
+            <img src="img/seafood chowder.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Seafood Chowder</a><span>PHP 150.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-soup">
+            <img src="img/cream of mushroom.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Cream of Mushroom</a><span>PHP 130.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-ricebowls">
+            <img src="img/beef tapa.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Beef Tapa</a><span>PHP 235.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Marinated Beef Sirloin (Soy Garlic) Slow cooked to perfection.
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-ricebowls">
+            <img src="img/pork adobo flakes.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Pork Adobo Flakes</a><span>PHP 220.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Deep Fried Shredded Pork Adobo
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-ricebowls">
+            <img src="img/sausage and egg.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Sausage & Egg</a><span>PHP 190.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Classic Sausage with Scrambled Egg
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-ricebowls">
+            <img src="img/spam and egg.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Spam & Egg</a><span>PHP 190.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Golden Fried Spam Served with Sunny Side Up Egg
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-ricebowls">
+            <img src="img/buffalo chicken rice.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Buffalo Chicken</a><span>PHP 200.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Fried Chicken Tossed in Our Own Buffalo Sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-ricebowls">
+            <img src="img/chicken karage.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chicken Karage</a><span>PHP 200.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Deep Fried Chicken Thigh Fillet with our Own Version of Karage Sauce
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-ricebowls">
+            <img src="img/pork tonkatsu.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Pork Tonkatsu</a><span>PHP 220.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Deep Fried Pork Cutlet with Asian Style Dressing Served with Shredded Cabbage
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-addons">
+            <img src="img/garlic rice.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Garlic Rice Upgrade</a><span>PHP 20.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-addons">
+            <img src="img/yang chow rice.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Yang Chow Upgrade</a><span>PHP 25.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-addons">
+            <img src="img/plain rice.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Extra Plain Rice</a><span>PHP 35.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-addons">
+            <img src="img/" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Extra Garlic Rice</a><span>PHP 45.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-addons">
+            <img src="img/" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Extra Yang Chow</a><span>PHP 55.00</span>
+            </div>
+            <div class="menu-ingredients">
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/americano.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Americano 12oz/16oz</a><span>PHP 55.00/110.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Hot or Iced
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/latte.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Latte 12oz/16oz</a><span>PHP 100.00/120.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Hot or Iced
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/cappucino.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Capuccino 12oz/16oz</a><span>PHP 100.00/120.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Hot or Iced
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/cafe mocha.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Cafe Mocha 12oz/16oz</a><span>PHP 110.00/130.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Hot or Iced
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/white mocha.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">White Mocha 12oz/16oz</a><span>PHP 115.00/135.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Hot or Iced
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/caramel macchiato.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Caramel Macchiato 12oz/16oz</a><span>PHP 120.00/140.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Hot or Iced
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/mocha frappe.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Mocha 12oz/16oz</a><span>PHP 140.00/155.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Coffee - Blended Coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/vanilla frappe.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Vanilla 12oz/16oz</a><span>PHP 140.00/155.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Coffee - Blended Coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/choco caramel.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chocolate Caramel 12oz/16oz</a><span>PHP 145.00/160.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Coffee - Blended Coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/choco chip.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chocolate Chips 12oz/16oz</a><span>PHP 145.00/160.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Coffee - Blended Coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/white choco.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">White Chocolate 12oz/16oz</a><span>PHP 140.00/155.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Coffee - Blended Coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/caramel frappe.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Caramel 12oz/16oz</a><span>PHP 140.00/155.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Coffee - Blended Coffee
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-coffee">
+            <img src="img/eggnog.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Eggnog 12oz/16oz</a><span>PHP 140.00/155.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Coffee - Blended Coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/cookies and cream.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Cookies and Cream 12oz/16oz</a><span>PHP 145.00/160.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream - Blended coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/double choco.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Double Chocolate 12oz/16oz</a><span>PHP 140.00/150.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream - Blended coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/strawberry cream.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Strawberry Cream 12oz/16oz</a><span>PHP 150.00/165.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream - Blended coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/white choco mocha.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">White Chocolate Mocha 12oz/16oz</a><span>PHP 150.00/165.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream - Blended coffee
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/vanilla bean cream.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Vanilla Bean Cream 12oz/16oz</a><span>PHP 140.00/155.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream - Blended coffee
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/matcha green tea.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Matcha Green Tea 12oz/16oz</a><span>PHP 150.00/165.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Tea - Blended tea
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/chai tea.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chai Tea 12oz/16oz</a><span>PHP 140.00/150.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Tea - Blended tea
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/english breakfast tea.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">English Breakfast 12oz</a><span>PHP 100.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/peppermint tea.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Peppermint 12oz</a><span>PHP 100.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/green tea.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Green Tea 12oz</a><span>PHP 100.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream
+            </div>
+          </div>
+
+          <div class="col-lg-6 menu-item filter-noncoffee">
+            <img src="img/chamomile.jpg" class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">Chamomile 12oz</a><span>PHP 110.00</span>
+            </div>
+            <div class="menu-ingredients">
+              Frappe Cream
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+
+  <!--Script for Modal is inline because for unknown reasons why 
+    This shits not working :) -->
+
+
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("open-modal-button");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+</body>
+
+</html>

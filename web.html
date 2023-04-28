@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE CORNER COFFEE SHOP</title>
+  <link rel="stylesheet" href="web.css">
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/0fb13bb383.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body id="Homepage">
+
+  <video autoplay loop muted>
+    <source src="Assets/promovid.mp4" type="video/mp4">
+  </video>
+ 
+  <div class="homeiconcontainer">
+  <a href="#" class="homeicon" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  </div>
+
+  <div class="topnav">
+     <a href="#" class="icon" onclick="openNav()"><i class="fa fa-bars"></i></a>
+</div>
+
+<!-- Overlay -->
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="web.html" class="logo"><img src="Assets/logo.png" alt="Brand Logo"></a>
+        <button class="dropdown-btn" onclick="toggleDropdown()">MENU</button>
+        <div class="overlay-dropdown-container">
+            <a href="product.html">COFFEE</a>
+            <a href="product.html">FOOD</a>
+            <a href="product.html">PASTRY</a>
+        </div>
+        <a href="location.html" class="sidebar-location">LOCATION</a>
+        <a href="contact.html" class="sidebar-contact">CONTACT</a>
+        <div class="overlay-socials">
+            <a href="https://www.facebook.com/TheCornerCalbayog">
+                <span class="fa-stack">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </span>
+            </a>
+            <a href="https://www.instagram.com/thecornercalbayog/">
+                <span class="fa-stack">
+
+                    <i class="fa-brands fa-instagram"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+  
+  
+    <div class="Homeicon-img">
+      <img src="Assets/logo.png">
+    </div>
+
+
+    <footer class="Social-Links">
+      <div class="footer-container">
+        <a href="#">
+          <span class="fa-stack">
+             <i class="fa-brands fa-facebook-f fa-stack-1.5x fa-inverse"   ></i>
+          </span>
+        </a>
+        <a href="#">
+          <span class="fa-stack">
+             <i class="fa-brands fa-instagram fa-stack-1.5x fa-inverse"  ></i>
+          </span>
+        </a>
+        <a href="#">
+          <span class="fa-stack">
+             <i class="fa-solid fa-envelope fa-stack-1.5x fa-inverse"  ></i>
+          </span>
+        </a>
+      </div>
+    </footer>
+ 
+  
+  
+</body>
+ 
+
+ 
+
+</html>
