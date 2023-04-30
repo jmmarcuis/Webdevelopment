@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -22,7 +28,8 @@
     <script type="application/javascript" src="script.js"></script>
     <script src="https://kit.fontawesome.com/0fb13bb383.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="coffee.css">
-    
+    <link rel="stylesheet" href="lightbox.css">
+
     <link rel="icon" href="Assets\logo.png" type="Assets\logo.png">
 
 </head>
@@ -125,38 +132,142 @@
         <!-- Everything else lol -->
         <div class="content">
             <div class="Showcase-Flagship-Product">
-
                 <div class="Flagship-Image">
+                    <button class="slider-btn slider-btn-left">&lt;</button>
                     <img data-image="Vanilla-Cheesecake" src="Assets/1.png" class="active" id="Flagship" alt="">
-
+                    <button class="slider-btn slider-btn-right">&gt;</button>
                 </div>
-                
                 <div class="Flagship-Description">
-                    <h2>PüreCo</h2>
-                    <h3>NEW RELEASE</h3>
-                    <h1>WHEY ISOLATE</h1>
-                    <h5>PHP. 1500.00 | 15 SERVINGS</h5>
-                    <p>Introducing our all-natural Whey Isolate, made with carefully selected ingredients to provide a
-                        high-quality protein source for your daily needs. Our formula contains no artificial flavors or
-                        sweeteners, and is free of hormones and antibiotics. With a smooth and delicious taste, our Whey
-                        Isolate
-                        is perfect for post-workout recovery or as a healthy snack option. Trust in the purity and
-                        quality of
-                        our product to help you achieve your fitness goals, naturally.
 
-                    </p>
+                    <div class="Flagship-text">
+                        <h1>CAFE ARABICA</h1>
+                        <h3>LOCALLY SOURCED BEANS</h3>
+                        <h4>Chocolate Candy Bar, Sweet Cherry, Rich</h4>
+                    </div>
 
-                    <h5>Ingredient</h5>
-                    <p>100% Whey Protein Isolate, Stevia (Artificial Sweetener), Natural Flavors, Sunflower lecithin,
-                        Sea Salt,
-                        BCAA</p>
+                    <form class="Flagship-form">
+                        <label for="coffee-quantity">Quantity:</label>
+                        <input type="number" id="coffee-quantity" name="coffee-quantity" min="1" max="10"
+                            placeholder="1">
+                        <label for="coffee-type">Grind:</label>
+                        <select name="coffee-type" id="coffee-type">
+                            <option value="wholebean">Whole Bean</option>
+                            <option value="pregrounded">Fine</option>
+                            <option value="pregrounded">Ultra Fine</option>
+                            <option value="pregrounded">Coarse</option>
+                        </select>
+
+                        <label for="coffee-size">Size:</label>
+                        <select name="coffee-size" id="coffee-size">
+                            <option value="250g">250g</option>
+                            <option value="500g">500g</option>
+                            <option value="1000g">1000g</option>
+                        </select>
+
+                        <button type="submit">Add to Cart</button>
+
+                    </form>
                 </div>
-
-
-                
             </div>
 
+
+            <div class="container" class="carousel-control">
+                <h1 CLASS="text-center" style=" color: rgb(0, 0, 0); font-size: 50px; font-weight: 600;letter-spacing: 7px; margin-bottom: 50px; ">SEE OUR OTHER BLENDS</h1>
+
+                <div class="row">
+                    <div class="col-sm-12">
+
+
+
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+
+                                <div class="item active">
+
+                                    <ul class="thumbnails">
+                                        <li class="col-sm-4">
+                                            <div class="thumbnail">
+
+                                                <a href="https://www.facebook.com/TheCornerCalbayog"><img src="Assets\1.png" alt="ARABICA"></a>
+                                                <h4>ARABICA</h4>
+                                                <p>SWEET, NUTTY, FRUITY</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="col-sm-4">
+                                            <div class="thumbnail">
+
+                                                <a href="https://www.facebook.com/TheCornerCalbayog"><img src="Assets\1.png" alt="BARAKO"></a>
+                                                <h4>BARAKO</h4>
+                                                <p>INTENSE, SMOKY, RICH</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="col-sm-4">
+                                            <div class="thumbnail">
+
+                                                <a href="https://www.facebook.com/TheCornerCalbayog"><img src="Assets\1.png" alt="EXCELSA"></a>
+                                                <h4>EXCELSA</h4>
+                                                <p>FRUITY, BRIGHT, SMOOTH</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div><!-- /Slide1 -->
+
+
+
+                                <div class="item">
+                                    <ul class="thumbnails">
+
+                                        <li class="col-sm-4">
+                                            <div class="thumbnail">
+                                                <a href="https://www.facebook.com/TheCornerCalbayog"><img src="Assets\1.png" alt="EXCELSA"></a>
+                                                <h4>ROBUSTICA</h4>
+                                                <p>STRONG, BOLD, EARTHY</p>
+                                            </div>
+                                        </li>
+
+                                        <li class="col-sm-4">
+                                            <div class="thumbnail">
+                                                <a href="https://www.facebook.com/TheCornerCalbayog"><img src="Assets\1.png" alt="EXCELSA"></a>
+                                                <span style="font-style:italic;"><h4>FLAVORED SERIES</h4></span>
+                                                <p>FRENCH VANILLA</p>
+                                             </div>
+                                        </li>
+
+                                        <li class="col-sm-4">
+                                            <div class="thumbnail">
+                                                <a href="https://www.facebook.com/TheCornerCalbayog"><img src="Assets\1.png" alt="EXCELSA"></a>
+                                                <span style="font-style:italic;"><h4>FLAVORED SERIES</h4></span>
+                                                <p>HAZELNUT</p>
+                                             </div>
+                                        </li>
+                                    </ul>
+                                </div><!-- /Slide2 -->
+
+                            </div><!-- /Wrapper for slides .carousel-inner -->
+
+
+
+                            <!-- Control box -->
+                            <div class="control-box">
+                                <a data-slide="prev" href="#myCarousel" class="carousel-control left">‹</a>
+                                <a data-slide="next" href="#myCarousel" class="carousel-control right">›</a>
+                            </div><!-- /.control-box -->
+
+
+
+                        </div><!-- /#myCarousel -->
+
+
+                    </div><!-- /.col-sm-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+
         </div>
+    </div>
 
 
 
@@ -197,4 +308,48 @@
             modal.style.display = "none";
         }
     }
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-180px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
+    const flagshipImage = document.querySelector('.Flagship-Image img');
+    const leftButton = document.querySelector('.slider-btn-left');
+    const rightButton = document.querySelector('.slider-btn-right');
+
+    const imageSources = ['Assets/1.png', 'Assets/isolate-2.png', 'Assets/isolate-3.png'];
+    let currentImageIndex = 0;
+
+    leftButton.onclick = function () {
+        currentImageIndex = (currentImageIndex === 0) ? imageSources.length - 1 : currentImageIndex - 1;
+        flagshipImage.src = imageSources[currentImageIndex];
+    };
+
+    rightButton.onclick = function () {
+        currentImageIndex = (currentImageIndex === imageSources.length - 1) ? 0 : currentImageIndex + 1;
+        flagshipImage.src = imageSources[currentImageIndex];
+    };
+
+</script>
+
+<script src="scriptcoffee.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
+
+<script>
+    lightbox.option({
+        'resizeDuration': 100,
+    })
+</script>
+
+
+
 </script>
